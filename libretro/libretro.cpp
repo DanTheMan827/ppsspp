@@ -589,10 +589,26 @@ static void check_variables(CoreParameter &coreParam)
    {
       iInternalResolution_prev = g_Config.iInternalResolution;
 
-      if (!strcmp(var.value, "480x272"))
+      if (!strcmp(var.value, "240x136"))
+         g_Config.iInternalResolution = 0.5;
+      else if (!strcmp(var.value, "360x204"))
+         g_Config.iInternalResolution = 0.75;
+      else if (!strcmp(var.value, "480x272"))
          g_Config.iInternalResolution = 1;
+      else if (!strcmp(var.value, "600x340"))
+         g_Config.iInternalResolution = 1.25;
+      else if (!strcmp(var.value, "720x408"))
+         g_Config.iInternalResolution = 1.5;
+      else if (!strcmp(var.value, "840x476"))
+         g_Config.iInternalResolution = 1.75;
       else if (!strcmp(var.value, "960x544"))
          g_Config.iInternalResolution = 2;
+      else if (!strcmp(var.value, "1080x612"))
+         g_Config.iInternalResolution = 2.25;
+      else if (!strcmp(var.value, "1200x680"))
+         g_Config.iInternalResolution = 2.5;
+      else if (!strcmp(var.value, "1320x748"))
+         g_Config.iInternalResolution = 2.75;
       else if (!strcmp(var.value, "1440x816"))
          g_Config.iInternalResolution = 3;
       else if (!strcmp(var.value, "1920x1088"))
