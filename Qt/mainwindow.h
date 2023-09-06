@@ -125,7 +125,7 @@ private slots:
 	void linearAct() { g_Config.iTexFiltering = (g_Config.iTexFiltering != 0) ? 0 : 3; }
 
 	void renderingResolutionGroup_triggered(QAction *action) {
-		g_Config.iInternalResolution = action->data().toInt();
+		g_Config.iInternalResolution = action->data().toFloat();
 		System_PostUIMessage("gpu_renderResized", "");
 	}
 	void windowGroup_triggered(QAction *action) { SetWindowScale(action->data().toInt()); }
