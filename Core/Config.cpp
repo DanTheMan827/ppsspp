@@ -316,7 +316,7 @@ static const ConfigSetting cpuSettings[] = {
 	ConfigSetting("CPUSpeed", &g_Config.iLockedCPUSpeed, 0, CfgFlag::PER_GAME | CfgFlag::REPORT),
 };
 
-static int DefaultInternalResolution() {
+static float DefaultInternalResolution() {
 	// Auto on Windows and Linux, 2x on large screens, 1x elsewhere.
 #if defined(USING_WIN_UI) || defined(USING_QT_UI)
 	return 0;
